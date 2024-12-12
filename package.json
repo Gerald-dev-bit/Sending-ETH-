@@ -2,12 +2,12 @@
   "name": "tx-web3",
   "version": "1.0.0",
   "type": "module",
-  "description": "sending 100 ETH from one address to another",
+  "description": "sending ETH from one address to another address",
   "main": "tx.js",
   "scripts": {
     "test": "node tx.js"
   },
-  "author": "Gerld",
+  "author": "Gerald-dev-bit",
   "license": "ISC",
   "dependencies": {
     "web3": "^4.16.0"
