@@ -1,17 +1,15 @@
 // importing dependencies
 import Web3 from 'web3';
 
-// const rpcURL = "https://sepolia.infura.io/v3/2b2ef1e320624d5396c9f418a0fdc41b";
-const rpcURL = 'HTTP://127.0.0.1:7545';
+const rpcURL = 'your rpc server'; // I recommend using Ganache. Download the application and start a new project
 const web3 = new Web3(rpcURL);
 
-// const address = '0x3bEADC9336900B681676bb58E4DcDde35dd3970a';
-const fromAddress = '0xd7aa5d659222521E969D687FaDA05a048AAc72F4';
-const toAddress = '0xF4CF0e5D17E662C94900532c7177e7c4e5017D07';
+const fromAddress = 'yourAddress';
+const toAddress = 'yourAddress';
 const privateKey =
-  '0xaf2c8d9c45c0efc4e0775434d6142411331c50772d339c0e7efd2fcc056b12fe';
+  'use fromAddress privateKey';
 
-// Fucntion to check balance of an Ethereum account
+// Function to check balance of an Ethereum account
 async function checkBalance(address) {
   try {
     const balance = await web3.eth.getBalance(address);
@@ -30,7 +28,7 @@ checkBalance(toAddress);
 // Fucntion to send ETH from one address to another
 async function sendETH(fromAddress, toAddress, privateKey) {
   try {
-    const amount = web3.utils.toWei('20', 'ether');
+    const amount = web3.utils.toWei('input any amount you want to send', 'ether');
     const nonce = await web3.eth.getTransactionCount(fromAddress, 'latest');
     const gasPrice = await web3.eth.getGasPrice();
     const gasLimit = 21000;
@@ -60,4 +58,4 @@ async function sendETH(fromAddress, toAddress, privateKey) {
   }
 }
 // Function usage
-// sendETH(fromAddress, toAddress, privateKey);
+sendETH(fromAddress, toAddress, privateKey);
