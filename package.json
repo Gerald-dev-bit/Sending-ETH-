@@ -2,6 +2,7 @@
   "name": "tx-web3",
   "version": "1.0.0",
   "type": "module",
+  "git repository": "https://github.com/Gerald-dev-bit/Sending-ETH-",
   "description": "sending ETH from one address to another address",
   "main": "tx.js",
   "scripts": {
